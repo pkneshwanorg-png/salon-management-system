@@ -1,75 +1,54 @@
-/*
-  main.js - UI helpers used across all pages
-  Handles: theme toggle, navbar active state, toast notifications
-*/
+// Services data array for services.html
+var services = [
+  { name: "Haircut & Styling", cat: "Hair", time: "45 min", price: "Rs 800" },
+  { name: "Keratin Treatment", cat: "Hair", time: "3 hrs", price: "Rs 5,500" },
+  { name: "Hair Coloring", cat: "Hair", time: "2 hrs", price: "Rs 3,500" },
+  { name: "Classic Facial", cat: "Skin", time: "60 min", price: "Rs 1,800" },
+  { name: "Manicure & Pedicure", cat: "Skin", time: "80 min", price: "Rs 1,500" },
+  { name: "Bridal Makeup", cat: "Bridal", time: "3 hrs", price: "Rs 8,000" }
+];
 
-// ---- Theme toggle (dark / light) ----
-const themeToggleBtn = document.getElementById("themeToggle");
-const savedTheme = localStorage.getItem("lumina_theme") || "light";
-document.documentElement.setAttribute("data-theme", savedTheme);
-updateToggleLabel(savedTheme);
-
-if (themeToggleBtn) {
-  themeToggleBtn.addEventListener("click", function () {
-    const current = document.documentElement.getAttribute("data-theme");
-    const next = current === "dark" ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem("lumina_theme", next);
-    updateToggleLabel(next);
+// Populate services table on services.html
+var sTable = document.getElementById("servicesTableBody");
+if (sTable) {
+  services.forEach(function (s) {
+    var tr = document.createElement("tr");
+    tr.innerHTML = "<td><strong>" + s.name + "</strong></td><td>" + s.cat + "</td><td>" + s.time + "</td><td>" + s.price + "</td><td><a href='booking.html' class='btn btn-primary btn-sm'>Book</a></td>";
+    sTable.appendChild(tr);
   });
 }
 
-function updateToggleLabel(theme) {
-  if (!themeToggleBtn) return;
-  themeToggleBtn.textContent = theme === "dark" ? "Light mode" : "Dark mode";
-  themeToggleBtn.setAttribute("aria-label", "Switch to " + (theme === "dark" ? "light" : "dark") + " mode");
-}
-
-// ---- Mark active nav link ----
-(function markActive() {
-  const path = window.location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".nav-link").forEach(function (link) {
-    const href = link.getAttribute("href");
-    if (href === path || (path === "" && href === "index.html")) {
-      link.classList.add("active");
-      link.setAttribute("aria-current", "page");
-    }
+// Render saved bookings on booking.html
+function renderBookings() {
+  var bBody = document.getElementById("bookingListBody");
+  if (!bBody) return;
+  var list = JSON.parse(localStorage.getItem("salon_bookings") || "[]");
+  bBody.innerHTML = list.length === 0 ? "<tr><td colspan='5' class='text-center text-muted'>No bookings saved yet.</td></tr>" : "";
+  list.forEach(function (b, i) {
+    var tr = document.createElement("tr");
+    tr.innerHTML = "<td>" + (i + 1) + "</td><td>" + b.name + " (" + b.phone + ")</td><td>" + b.service + "</td><td>" + b.stylist + "</td><td>" + b.date + " at " + b.time + "</td>";
+    bBody.appendChild(tr);
   });
-})();
-
-// ---- Toast notification ----
-function showToast(message, type) {
-  type = type || "success";
-  let container = document.querySelector(".toast-container");
-  if (!container) {
-    container = document.createElement("div");
-    container.className = "toast-container";
-    document.body.appendChild(container);
-  }
-  const toast = document.createElement("div");
-  toast.className = "toast " + (type !== "success" ? type : "");
-  toast.textContent = message;
-  container.appendChild(toast);
-  setTimeout(function () {
-    toast.style.opacity = "0";
-    toast.style.transition = "opacity 0.4s";
-    setTimeout(function () { toast.remove(); }, 400);
-  }, 3800);
 }
 
-// ---- Format date to readable string ----
-function formatDate(dateStr) {
-  if (!dateStr) return "";
-  const d = new Date(dateStr + "T00:00:00");
-  return d.toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
+// Booking form submission
+function handleBookingSubmit(e) {
+  e.preventDefault();
+  if (!bForm.checkValidity()) { bForm.reportValidity(); return; }
+  var item = {
+    name: bForm.name.value, phone: bForm.phone.value, service: bForm.service.value,
+    stylist: bForm.stylist.value, date: bForm.date.value, time: bForm.time.value
+  };
+  var list = JSON.parse(localStorage.getItem("salon_bookings") || "[]");
+  list.push(item);
+  localStorage.setItem("salon_bookings", JSON.stringify(list));
+  bForm.reset();
+  document.getElementById("bookMsg").textContent = "Booking saved successfully!";
+  renderBookings();
 }
 
-// ---- Format currency ----
-function formatINR(amount) {
-  return "\u20B9" + amount.toLocaleString("en-IN");
+var bForm = document.getElementById("bookingForm");
+if (bForm) {
+  renderBookings();
+  bForm.addEventListener("submit", handleBookingSubmit);
 }
-
-// ---- Expose helpers globally ----
-window.showToast  = showToast;
-window.formatDate = formatDate;
-window.formatINR  = formatINR;

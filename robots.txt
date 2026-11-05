@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /appointments.html
 
-Sitemap: https://neshwanpk.github.io/salon-management-system/sitemap.xml
+Sitemap: https://pkneshwanorg-png.github.io/salon-management-system/sitemap.xml
