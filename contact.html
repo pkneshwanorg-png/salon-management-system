@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Lumina Salon - Kochi</title>
+  <meta name="description" content="Get in touch with Lumina Salon, Kochi. Find our address, phone, email, and opening hours.">
+  <meta name="keywords" content="contact salon Kochi, Lumina Salon address, salon phone number">
+  <meta property="og:title" content="Contact | Lumina Salon">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Lumina Salon home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" fill="#c9a84c" opacity="0.15"/>
+          <path d="M16 4 C16 4 22 10 22 17 C22 20.3 19.3 23 16 23 C12.7 23 10 20.3 10 17 C10 10 16 4 16 4Z" fill="#c9a84c"/>
+          <circle cx="16" cy="17" r="3" fill="#fff"/>
+          <line x1="16" y1="23" x2="16" y2="29" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Lumina</span>
+      </a>
+      <input type="checkbox" id="navToggle" class="nav-toggle" aria-hidden="true">
+      <label for="navToggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"        class="nav-link">Home</a></li>
+        <li><a href="services.html"     class="nav-link">Services</a></li>
+        <li><a href="booking.html"      class="nav-link">Book Now</a></li>
+        <li><a href="staff.html"        class="nav-link">Our Team</a></li>
+        <li><a href="gallery.html"      class="nav-link">Gallery</a></li>
+        <li><a href="contact.html"      class="nav-link">Contact</a></li>
+        <li><a href="appointments.html" class="nav-link">Admin</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">Dark mode</button>
+        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <div class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Contact</span>
+        </nav>
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you</p>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="two-col">
+
+          <!-- Contact Form - Unit II: forms -->
+          <div>
+            <h2 id="contact-heading" style="font-family:var(--font-heading); margin-bottom:0.4rem;">Send a Message</h2>
+            <p class="text-muted mb-3">We respond within 24 hours on working days.</p>
+
+            <form id="contactForm" class="form-card" style="padding:2rem;" novalidate>
+
+              <div class="form-group">
+                <label for="contactName">Your Name <span class="required">*</span></label>
+                <input type="text" id="contactName" name="name"
+                  required minlength="2"
+                  placeholder="e.g. Deepa Menon"
+                  autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail">Email Address <span class="required">*</span></label>
+                <input type="email" id="contactEmail" name="email"
+                  required
+                  placeholder="yourname@email.com"
+                  autocomplete="email">
+              </div>
+
+              <div class="form-group">
+                <label for="contactPhone">Phone Number</label>
+                <input type="tel" id="contactPhone" name="phone"
+                  placeholder="98XXXXXXXX"
+                  pattern="[6-9][0-9]{9}"
+                  maxlength="10"
+                  autocomplete="tel">
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject">Subject <span class="required">*</span></label>
+                <select id="contactSubject" name="subject" required>
+                  <option value="" disabled selected>Select a topic&hellip;</option>
+                  <option value="Appointment Enquiry">Appointment Enquiry</option>
+                  <option value="Bridal Package">Bridal Package</option>
+                  <option value="Feedback">Feedback</option>
+                  <option value="Complaint">Complaint</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMsg">Message <span class="required">*</span></label>
+                <textarea id="contactMsg" name="message"
+                  required minlength="10" maxlength="1000"
+                  rows="5"
+                  placeholder="Tell us how we can help you&hellip;"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-full">Send Message</button>
+              <p id="contactSuccess" style="color:var(--color-success); font-size:0.9rem; margin-top:0.75rem; display:none;">
+                Thank you! We'll get back to you soon.
+              </p>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h2 style="font-family:var(--font-heading); margin-bottom:1.5rem;">Our Details</h2>
+
+            <!-- Unit II: address semantic element -->
+            <address style="font-style:normal; margin-bottom:2rem;">
+              <div class="card mb-2" style="padding:1.25rem;">
+                <p style="font-weight:700; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.5rem;">
+                  <!-- Unit I: Inline SVG location icon -->
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Address
+                </p>
+                <p class="text-muted">42, MG Road, Ernakulam<br>Kochi, Kerala - 682035</p>
+              </div>
+
+              <div class="card mb-2" style="padding:1.25rem;">
+                <p style="font-weight:700; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.5rem;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.4a16 16 0 0 0 5.65 5.65l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  Phone
+                </p>
+                <p class="text-muted">
+                  <a href="tel:+914842345678">+91 484 234 5678</a><br>
+                  <a href="tel:+919876543200">+91 98765 43200</a> (WhatsApp)
+                </p>
+              </div>
+
+              <div class="card mb-2" style="padding:1.25rem;">
+                <p style="font-weight:700; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.5rem;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                  Email
+                </p>
+                <p class="text-muted">
+                  <a href="mailto:hello@luminasalon.in">hello@luminasalon.in</a><br>
+                  <a href="mailto:bookings@luminasalon.in">bookings@luminasalon.in</a>
+                </p>
+              </div>
+            </address>
+
+            <!-- Opening Hours Table - Unit II: table -->
+            <h3 style="font-family:var(--font-heading); margin-bottom:1rem;">Opening Hours</h3>
+            <div class="table-wrap">
+              <table class="hours-table" aria-label="Salon opening hours">
+                <caption>Weekly Schedule</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">Hours</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Monday</th>
+                    <td><time datetime="09:00">9:00 AM</time> - <time datetime="20:00">8:00 PM</time></td>
+                    <td><span class="badge badge-confirmed">Open</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Tuesday</th>
+                    <td><time datetime="09:00">9:00 AM</time> - <time datetime="20:00">8:00 PM</time></td>
+                    <td><span class="badge badge-confirmed">Open</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Wednesday</th>
+                    <td><time datetime="09:00">9:00 AM</time> - <time datetime="20:00">8:00 PM</time></td>
+                    <td><span class="badge badge-confirmed">Open</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Thursday</th>
+                    <td><time datetime="09:00">9:00 AM</time> - <time datetime="20:00">8:00 PM</time></td>
+                    <td><span class="badge badge-confirmed">Open</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Friday</th>
+                    <td><time datetime="09:00">9:00 AM</time> - <time datetime="20:00">8:00 PM</time></td>
+                    <td><span class="badge badge-confirmed">Open</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Saturday</th>
+                    <td><time datetime="08:00">8:00 AM</time> - <time datetime="21:00">9:00 PM</time></td>
+                    <td><span class="badge badge-confirmed">Open</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sunday</th>
+                    <td><time datetime="10:00">10:00 AM</time> - <time datetime="17:00">5:00 PM</time></td>
+                    <td><span class="badge badge-warning" style="background:rgba(230,126,34,0.12); color:var(--color-warning);">Limited</span></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="3">Public holidays: 10:00 AM - 4:00 PM (call ahead)</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map embed - Unit I: iframe -->
+        <div class="map-wrap mt-3">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0167573024944!2d76.28774461479213!3d9.983153492879395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514abec6bf%3A0xbd582caa5f6a2fd5!2sMG%20Road%2C%20Ernakulam%2C%20Kochi!5e0!3m2!1sen!2sin!4v1623000000000!5m2!1sen!2sin"
+            title="Lumina Salon on Google Maps"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:0.9rem; display:flex; color:#fff;">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="14" fill="#c9a84c" opacity="0.2"/>
+              <path d="M16 4 C16 4 22 10 22 17 C22 20.3 19.3 23 16 23 C12.7 23 10 20.3 10 17 C10 10 16 4 16 4Z" fill="#c9a84c"/>
+              <circle cx="16" cy="17" r="3" fill="#fff"/>
+            </svg>
+            <span style="color:#fff;">Lumina</span>
+          </a>
+          <p class="footer-desc">Premium beauty &amp; wellness in Kochi since 2015.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Quick Links</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Info</p>
+          <ul class="footer-links">
+            <li><a href="register.html">Register</a></li>
+            <li><a href="appointments.html">Admin</a></li>
+            <li><a href="sitemap.xml">Sitemap</a></li>
+          </ul>
+        </div>
+        <address class="footer-contact" style="font-style:normal;">
+          <p class="footer-heading" style="font-style:normal;">Contact</p>
+          <p>42, MG Road, Ernakulam, Kochi</p>
+          <p><a href="tel:+914842345678" style="color:#9a9080;">+91 484 234 5678</a></p>
+          <p><a href="mailto:hello@luminasalon.in" style="color:#9a9080;">hello@luminasalon.in</a></p>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <time datetime="2026">2026</time> Lumina Salon. All rights reserved.</p>
+        <p>CSE326 Internet Programming</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    var contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          return;
+        }
+        document.getElementById("contactSuccess").style.display = "block";
+        contactForm.reset();
+        showToast("Message sent! We'll reply within 24 hours.");
+      });
+    }
+  </script>
+</body>
+</html>

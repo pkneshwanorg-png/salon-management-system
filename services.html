@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Prices | Lumina Salon - Kochi</title>
+  <meta name="description" content="Browse Lumina Salon's full service menu including hair, skin, bridal, and nail services with prices in INR.">
+  <meta name="keywords" content="salon services, hair treatment, facial, bridal, Kochi, prices">
+  <meta property="og:title" content="Services | Lumina Salon">
+  <meta property="og:description" content="Full service menu with prices at Lumina Salon, Kochi.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Unit II: Semantic header -->
+  <header class="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Lumina Salon home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" fill="#c9a84c" opacity="0.15"/>
+          <path d="M16 4 C16 4 22 10 22 17 C22 20.3 19.3 23 16 23 C12.7 23 10 20.3 10 17 C10 10 16 4 16 4Z" fill="#c9a84c"/>
+          <circle cx="16" cy="17" r="3" fill="#fff"/>
+          <line x1="16" y1="23" x2="16" y2="29" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Lumina</span>
+      </a>
+      <input type="checkbox" id="navToggle" class="nav-toggle" aria-hidden="true">
+      <label for="navToggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"        class="nav-link">Home</a></li>
+        <li><a href="services.html"     class="nav-link">Services</a></li>
+        <li><a href="booking.html"      class="nav-link">Book Now</a></li>
+        <li><a href="staff.html"        class="nav-link">Our Team</a></li>
+        <li><a href="gallery.html"      class="nav-link">Gallery</a></li>
+        <li><a href="contact.html"      class="nav-link">Contact</a></li>
+        <li><a href="appointments.html" class="nav-link">Admin</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">Dark mode</button>
+        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Unit II: Semantic section for page intro -->
+    <div class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Services</span>
+        </nav>
+        <h1>Our Services</h1>
+        <p>Premium treatments crafted with care, priced transparently</p>
+      </div>
+    </div>
+
+    <!-- ======================================================
+         SERVICE CARDS BY CATEGORY
+         Unit I: Images with alt text
+         Unit II: article, section, figure, figcaption
+    ====================================================== -->
+
+    <section class="section" aria-labelledby="hair-heading">
+      <div class="container">
+        <h2 id="hair-heading" class="section-title">Hair Services</h2>
+        <p class="section-subtitle">From everyday cuts to transformative treatments</p>
+
+        <div class="cards-grid" id="hairCards">
+          <!-- JS renders -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: rgba(201,168,76,0.04);" aria-labelledby="skin-heading">
+      <div class="container">
+        <h2 id="skin-heading" class="section-title">Skin & Beauty</h2>
+        <p class="section-subtitle">Facials, waxing, and specialty skin treatments</p>
+        <div class="cards-grid" id="skinCards"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="bridal-heading">
+      <div class="container">
+        <h2 id="bridal-heading" class="section-title">Bridal & Special Occasion</h2>
+        <p class="section-subtitle">Look your absolute best on your most important days</p>
+        <div class="cards-grid" id="bridalCards"></div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PRICE TABLE
+         Unit II: Table with thead, tbody, tfoot, caption,
+                  scope, colspan, rowspan
+    ====================================================== -->
+    <section class="section" style="background: rgba(201,168,76,0.04);" aria-labelledby="price-table-heading">
+      <div class="container">
+        <h2 id="price-table-heading" class="section-title">Complete Price List</h2>
+        <p class="section-subtitle">All prices are inclusive of GST</p>
+
+        <div class="table-wrap">
+          <!-- Unit II: Table with caption -->
+          <table aria-label="Service price list">
+            <caption>Lumina Salon - Service Rates (INR, incl. GST)</caption>
+            <thead>
+              <tr>
+                <!-- Unit II: scope attribute for accessibility -->
+                <th scope="col">Service</th>
+                <th scope="col">Category</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Price (&#8377;)</th>
+                <th scope="col">Book</th>
+              </tr>
+            </thead>
+            <tbody id="priceTableBody">
+              <!-- JS renders rows -->
+            </tbody>
+            <!-- Unit II: tfoot -->
+            <tfoot>
+              <tr>
+                <!-- Unit II: colspan attribute -->
+                <td colspan="3">Packages &amp; combos available. Ask at reception.</td>
+                <td colspan="2">Member discount: 15% off</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+
+        <!-- Unit I: Description list for terms -->
+        <section class="mt-3" aria-labelledby="terms-heading">
+          <h3 id="terms-heading" style="font-family: var(--font-heading); margin-bottom:0.75rem;">Booking Terms</h3>
+          <dl style="display:grid; grid-template-columns: auto 1fr; gap: 0.4rem 1.5rem; font-size:0.92rem;">
+            <dt style="font-weight:700; color:var(--color-primary);">Cancellation</dt>
+            <dd>Free cancellation up to 2 hours before appointment.</dd>
+            <dt style="font-weight:700; color:var(--color-primary);">Deposit</dt>
+            <dd>Bridal bookings require a 20% advance deposit.</dd>
+            <dt style="font-weight:700; color:var(--color-primary);">Walk-ins</dt>
+            <dd>Welcome subject to stylist availability.</dd>
+            <dt style="font-weight:700; color:var(--color-primary);">Children</dt>
+            <dd>Special rates available for children under 12.</dd>
+          </dl>
+        </section>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:0.9rem; display:flex; color:#fff;">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="14" fill="#c9a84c" opacity="0.2"/>
+              <path d="M16 4 C16 4 22 10 22 17 C22 20.3 19.3 23 16 23 C12.7 23 10 20.3 10 17 C10 10 16 4 16 4Z" fill="#c9a84c"/>
+              <circle cx="16" cy="17" r="3" fill="#fff"/>
+            </svg>
+            <span style="color:#fff;">Lumina</span>
+          </a>
+          <p class="footer-desc">Premium beauty &amp; wellness in Kochi since 2015.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Quick Links</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="staff.html">Our Team</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Info</p>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="appointments.html">Admin</a></li>
+          </ul>
+        </div>
+        <address class="footer-contact" style="font-style:normal;">
+          <p class="footer-heading" style="font-style:normal;">Contact</p>
+          <p>42, MG Road, Ernakulam, Kochi</p>
+          <p><a href="tel:+914842345678" style="color:#9a9080;">+91 484 234 5678</a></p>
+          <p><a href="mailto:hello@luminasalon.in" style="color:#9a9080;">hello@luminasalon.in</a></p>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <time datetime="2026">2026</time> Lumina Salon. All rights reserved.</p>
+        <p>CSE326 Internet Programming</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // All services data array - loaded from JS, renders into cards and table
+    var allServices = [
+      // Hair
+      { name:"Haircut & Styling", cat:"Hair", duration:"45 min", price:800,
+        desc:"Precision cut tailored to your face shape, finished with professional styling.", img:"https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&q=80" },
+      { name:"Blowout & Styling", cat:"Hair", duration:"40 min", price:1200,
+        desc:"Smooth, voluminous blowdry and style that lasts through the day.", img:"https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80" },
+      { name:"Keratin Treatment", cat:"Hair", duration:"3 hrs", price:5500,
+        desc:"Brazilian keratin smoothing for frizz-free, silky hair lasting up to 4 months.", img:"https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=400&q=80" },
+      { name:"Hair Coloring", cat:"Hair", duration:"2 hrs", price:3500,
+        desc:"Full color, highlights, balayage, or ombre using ammonia-free formulas.", img:"https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&q=80" },
+      { name:"Deep Conditioning", cat:"Hair", duration:"60 min", price:1000,
+        desc:"Intensive moisture treatment to restore dry, damaged, or color-treated hair.", img:"https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&q=80" },
+      { name:"Head Massage", cat:"Hair", duration:"30 min", price:600,
+        desc:"Relaxing scalp massage with warm oil to stimulate growth and relieve stress.", img:"https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400&q=80" },
+      // Skin
+      { name:"Classic Facial", cat:"Skin", duration:"60 min", price:1800,
+        desc:"Deep cleansing, exfoliation, extraction, mask, and moisturisation.", img:"https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80" },
+      { name:"Anti-Ageing Facial", cat:"Skin", duration:"75 min", price:2800,
+        desc:"Collagen-boosting facial targeting fine lines and uneven skin tone.", img:"https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80" },
+      { name:"Eyebrow Threading & Shaping", cat:"Skin", duration:"20 min", price:300,
+        desc:"Expert threading and shaping to frame your face beautifully.", img:"https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=400&q=80" },
+      { name:"Waxing (Full Body)", cat:"Skin", duration:"90 min", price:2200,
+        desc:"Smooth, long-lasting results using premium, skin-friendly wax.", img:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
+      { name:"Manicure & Pedicure Combo", cat:"Skin", duration:"80 min", price:1500,
+        desc:"Nail shaping, cuticle care, scrub, massage, and polish of your choice.", img:"https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80" },
+      // Bridal
+      { name:"Bridal Makeup", cat:"Bridal", duration:"3 hrs", price:8000,
+        desc:"Complete bridal look with trial session, accessories, and touch-up kit.", img:"https://images.unsplash.com/photo-1519741497674-611481863552?w=400&q=80" },
+      { name:"Party Makeup", cat:"Bridal", duration:"90 min", price:3500,
+        desc:"Glamorous look for receptions, parties, and festive events.", img:"https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&q=80" }
+    ];
+
+    // Render service cards by category
+    function renderCards(containerId, category) {
+      var container = document.getElementById(containerId);
+      if (!container) return;
+      var filtered = allServices.filter(function(s) { return s.cat === category; });
+      filtered.forEach(function(s) {
+        var article = document.createElement("article");
+        article.className = "service-card";
+        article.innerHTML =
+          '<img src="' + s.img + '" alt="' + s.name + '" class="service-card-img" loading="lazy" ' +
+            'onerror="this.style.background=\'linear-gradient(135deg,#f0e6d3,#e8d5b7)\'; this.src=\'\';">' +
+          '<div class="service-card-body">' +
+            '<span class="service-badge">' + s.cat + '</span>' +
+            '<h3 class="card-title">' + s.name + '</h3>' +
+            '<p class="card-price">\u20B9' + s.price.toLocaleString("en-IN") + ' &middot; ' + s.duration + '</p>' +
+            '<p class="card-desc">' + s.desc + '</p>' +
+            '<a href="booking.html" class="btn btn-outline btn-sm" style="margin-top:1rem;">Book Now</a>' +
+          '</div>';
+        container.appendChild(article);
+      });
+    }
+
+    renderCards("hairCards",   "Hair");
+    renderCards("skinCards",   "Skin");
+    renderCards("bridalCards", "Bridal");
+
+    // Render price table
+    var tbody = document.getElementById("priceTableBody");
+    if (tbody) {
+      allServices.forEach(function(s, i) {
+        var tr = document.createElement("tr");
+        tr.innerHTML =
+          '<td><strong>' + s.name + '</strong></td>' +
+          '<td>' + s.cat + '</td>' +
+          '<td>' + s.duration + '</td>' +
+          '<td>\u20B9' + s.price.toLocaleString("en-IN") + '</td>' +
+          '<td><a href="booking.html" class="btn btn-primary btn-sm">Book</a></td>';
+        tbody.appendChild(tr);
+      });
+    }
+  </script>
+</body>
+</html>

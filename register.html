@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Lumina Salon - Create Your Account</title>
+  <meta name="description" content="Create your Lumina Salon account to manage bookings, track appointments, and receive exclusive offers.">
+  <meta name="keywords" content="register, create account, Lumina Salon, loyalty">
+  <meta property="og:title" content="Register | Lumina Salon">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Lumina Salon home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" fill="#c9a84c" opacity="0.15"/>
+          <path d="M16 4 C16 4 22 10 22 17 C22 20.3 19.3 23 16 23 C12.7 23 10 20.3 10 17 C10 10 16 4 16 4Z" fill="#c9a84c"/>
+          <circle cx="16" cy="17" r="3" fill="#fff"/>
+          <line x1="16" y1="23" x2="16" y2="29" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Lumina</span>
+      </a>
+      <input type="checkbox" id="navToggle" class="nav-toggle" aria-hidden="true">
+      <label for="navToggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"        class="nav-link">Home</a></li>
+        <li><a href="services.html"     class="nav-link">Services</a></li>
+        <li><a href="booking.html"      class="nav-link">Book Now</a></li>
+        <li><a href="staff.html"        class="nav-link">Our Team</a></li>
+        <li><a href="gallery.html"      class="nav-link">Gallery</a></li>
+        <li><a href="contact.html"      class="nav-link">Contact</a></li>
+        <li><a href="appointments.html" class="nav-link">Admin</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">Dark mode</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <div class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Register</span>
+        </nav>
+        <h1>Create Your Account</h1>
+        <p>Join Lumina and get exclusive member discounts and priority booking</p>
+      </div>
+    </div>
+
+    <!-- ======================================================
+         REGISTRATION FORM
+         Unit II: All form input types demonstrated
+         Covers: text, email, tel, password, date, number,
+                 select, radio, checkbox, textarea, range;
+                 required, pattern, min, max, placeholder,
+                 autocomplete, HTML5 validation
+    ====================================================== -->
+    <section class="section" aria-labelledby="register-heading">
+      <div class="container">
+        <div class="form-card">
+          <h2 id="register-heading" class="form-title">New Member Registration</h2>
+          <p class="form-subtitle">Fill in your details to create a Lumina account. Already a member? <a href="appointments.html">Sign in</a>.</p>
+
+          <form id="registerForm" novalidate autocomplete="on">
+
+            <!-- Personal Info -->
+            <fieldset>
+              <legend>Personal Information</legend>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="regFirst">First Name <span class="required">*</span></label>
+                  <input type="text" id="regFirst" name="firstName"
+                    required minlength="2" maxlength="30"
+                    placeholder="Priya"
+                    autocomplete="given-name"
+                    pattern="[A-Za-z]{2,30}">
+                </div>
+                <div class="form-group">
+                  <label for="regLast">Last Name <span class="required">*</span></label>
+                  <input type="text" id="regLast" name="lastName"
+                    required minlength="2" maxlength="30"
+                    placeholder="Nair"
+                    autocomplete="family-name"
+                    pattern="[A-Za-z]{2,30}">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="regEmail">Email Address <span class="required">*</span></label>
+                <input type="email" id="regEmail" name="email"
+                  required
+                  placeholder="yourname@email.com"
+                  autocomplete="email"
+                  aria-describedby="emailHint">
+                <small id="emailHint" class="form-hint">Used for booking confirmations and offers</small>
+              </div>
+
+              <div class="form-group">
+                <label for="regPhone">Mobile Number <span class="required">*</span></label>
+                <input type="tel" id="regPhone" name="phone"
+                  required
+                  placeholder="98XXXXXXXX"
+                  pattern="[6-9][0-9]{9}"
+                  maxlength="10"
+                  autocomplete="tel">
+              </div>
+
+              <!-- Unit II: date input -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="regDob">Date of Birth</label>
+                  <input type="date" id="regDob" name="dob"
+                    autocomplete="bday"
+                    max="2010-01-01">
+                </div>
+
+                <!-- Unit II: number input -->
+                <div class="form-group">
+                  <label for="regAge">Age</label>
+                  <input type="number" id="regAge" name="age"
+                    min="13" max="100"
+                    placeholder="e.g. 28">
+                </div>
+              </div>
+
+              <!-- Unit II: radio inputs for gender -->
+              <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group" role="radiogroup" aria-label="Gender">
+                  <label class="radio-label">
+                    <input type="radio" name="gender" value="Female">
+                    <span>Female</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="gender" value="Male">
+                    <span>Male</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="gender" value="Non-binary">
+                    <span>Non-binary</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="gender" value="Prefer not to say">
+                    <span>Prefer not to say</span>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Account Security -->
+            <fieldset>
+              <legend>Account Security</legend>
+
+              <div class="form-group">
+                <label for="regPass">Password <span class="required">*</span></label>
+                <input type="password" id="regPass" name="password"
+                  required
+                  minlength="8"
+                  placeholder="Min. 8 characters"
+                  autocomplete="new-password"
+                  aria-describedby="passHint">
+                <small id="passHint" class="form-hint">At least 8 characters. Use a mix of letters and numbers.</small>
+              </div>
+
+              <div class="form-group">
+                <label for="regPassConfirm">Confirm Password <span class="required">*</span></label>
+                <input type="password" id="regPassConfirm" name="confirmPassword"
+                  required
+                  minlength="8"
+                  placeholder="Repeat your password"
+                  autocomplete="new-password">
+                <p id="passMatchError" class="form-error">Passwords do not match.</p>
+              </div>
+            </fieldset>
+
+            <!-- Preferences -->
+            <fieldset>
+              <legend>Preferences &amp; Interests</legend>
+
+              <!-- Unit II: checkbox for interests -->
+              <div class="form-group">
+                <label>Services You're Interested In</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests" value="Hair">
+                    <span>Hair</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests" value="Skin">
+                    <span>Skin &amp; Facials</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests" value="Bridal">
+                    <span>Bridal</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests" value="Nails">
+                    <span>Nails</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="interests" value="Wellness">
+                    <span>Wellness</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Unit II: range input -->
+              <div class="form-group">
+                <label for="regBudget">Monthly Beauty Budget: <strong id="regBudgetDisplay">&#8377;2,000</strong></label>
+                <input type="range" id="regBudget" name="monthlyBudget"
+                  min="500" max="15000" step="500" value="2000">
+                <div class="range-label">
+                  <span>&#8377;500</span><span>&#8377;15,000</span>
+                </div>
+              </div>
+
+              <!-- Unit II: select for preferred contact method -->
+              <div class="form-group">
+                <label for="regContactPref">Preferred Contact Method</label>
+                <select id="regContactPref" name="contactPref">
+                  <option value="" disabled selected>Choose&hellip;</option>
+                  <option value="WhatsApp">WhatsApp</option>
+                  <option value="SMS">SMS</option>
+                  <option value="Email">Email</option>
+                  <option value="Call">Phone Call</option>
+                </select>
+              </div>
+
+              <!-- Unit II: textarea -->
+              <div class="form-group">
+                <label for="regNotes">Anything we should know? (allergies, skin type, etc.)</label>
+                <textarea id="regNotes" name="notes"
+                  rows="3"
+                  maxlength="400"
+                  placeholder="e.g. Sensitive scalp, allergic to sulphates, prefer natural products&hellip;"></textarea>
+              </div>
+
+              <!-- Promotional checkbox -->
+              <div class="form-group">
+                <label class="checkbox-label" style="border:none; padding:0;">
+                  <input type="checkbox" name="newsletter" value="yes">
+                  <span>Send me offers, tips, and beauty news by email</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Terms -->
+            <div class="form-group">
+              <label class="checkbox-label" style="border:none; padding:0;">
+                <input type="checkbox" id="regTerms" name="terms" required>
+                <span>I agree to Lumina's <a href="contact.html">Terms of Service</a> and <a href="contact.html">Privacy Policy</a>. <span class="required">*</span></span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-full" style="font-size:1.05rem; padding:1rem;">
+              Create Account
+            </button>
+
+            <p id="regError" style="color:var(--color-danger); font-size:0.85rem; margin-top:0.75rem; display:none;"></p>
+            <p id="regSuccess" style="color:var(--color-success); font-size:0.9rem; margin-top:0.75rem; display:none;">
+              Account created! Welcome to Lumina. <a href="booking.html">Book your first appointment.</a>
+            </p>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:0.9rem; display:flex; color:#fff;">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="14" fill="#c9a84c" opacity="0.2"/>
+              <path d="M16 4 C16 4 22 10 22 17 C22 20.3 19.3 23 16 23 C12.7 23 10 20.3 10 17 C10 10 16 4 16 4Z" fill="#c9a84c"/>
+              <circle cx="16" cy="17" r="3" fill="#fff"/>
+            </svg>
+            <span style="color:#fff;">Lumina</span>
+          </a>
+          <p class="footer-desc">Premium beauty &amp; wellness in Kochi since 2015.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Quick Links</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Info</p>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="appointments.html">Admin</a></li>
+          </ul>
+        </div>
+        <address class="footer-contact" style="font-style:normal;">
+          <p class="footer-heading" style="font-style:normal;">Contact</p>
+          <p>42, MG Road, Ernakulam, Kochi</p>
+          <p><a href="tel:+914842345678" style="color:#9a9080;">+91 484 234 5678</a></p>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <time datetime="2026">2026</time> Lumina Salon. All rights reserved.</p>
+        <p>CSE326 Internet Programming</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Budget range display
+    var regBudget  = document.getElementById("regBudget");
+    var regDisplay = document.getElementById("regBudgetDisplay");
+    if (regBudget) {
+      regBudget.addEventListener("input", function () {
+        regDisplay.textContent = "\u20B9" + parseInt(this.value).toLocaleString("en-IN");
+      });
+    }
+
+    // Password match check
+    var passEl        = document.getElementById("regPass");
+    var passConfirmEl = document.getElementById("regPassConfirm");
+    var passError     = document.getElementById("passMatchError");
+
+    passConfirmEl.addEventListener("input", function () {
+      if (passEl.value !== passConfirmEl.value) {
+        passError.style.display = "block";
+      } else {
+        passError.style.display = "none";
+      }
+    });
+
+    // Registration form submit
+    var regForm = document.getElementById("registerForm");
+    regForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      if (!regForm.checkValidity()) {
+        regForm.reportValidity();
+        return;
+      }
+
+      if (passEl.value !== passConfirmEl.value) {
+        passError.style.display = "block";
+        return;
+      }
+
+      var first = document.getElementById("regFirst").value.trim();
+      var last  = document.getElementById("regLast").value.trim();
+      var data  = {
+        name:   first + " " + last,
+        email:  document.getElementById("regEmail").value.trim(),
+        phone:  document.getElementById("regPhone").value.trim(),
+        dob:    document.getElementById("regDob").value,
+        gender: (regForm.querySelector('input[name="gender"]:checked') || {}).value || ""
+      };
+
+      var result = addCustomer(data);
+      var errorEl   = document.getElementById("regError");
+      var successEl = document.getElementById("regSuccess");
+
+      if (result.ok) {
+        successEl.style.display = "block";
+        errorEl.style.display   = "none";
+        regForm.reset();
+        regDisplay.textContent = "\u20B92,000";
+        showToast("Welcome to Lumina, " + first + "!");
+      } else {
+        errorEl.textContent   = result.message;
+        errorEl.style.display = "block";
+        successEl.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>

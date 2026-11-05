@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team - Stylists & Staff | Lumina Salon</title>
+  <meta name="description" content="Meet the expert stylists at Lumina Salon, Kochi. View their specialisations and weekly availability.">
+  <meta name="keywords" content="salon stylists, Kochi beauticians, hair expert, bridal makeup artist">
+  <meta property="og:title" content="Our Team | Lumina Salon">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Lumina Salon home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" fill="#c9a84c" opacity="0.15"/>
+          <path d="M16 4 C16 4 22 10 22 17 C22 20.3 19.3 23 16 23 C12.7 23 10 20.3 10 17 C10 10 16 4 16 4Z" fill="#c9a84c"/>
+          <circle cx="16" cy="17" r="3" fill="#fff"/>
+          <line x1="16" y1="23" x2="16" y2="29" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Lumina</span>
+      </a>
+      <input type="checkbox" id="navToggle" class="nav-toggle" aria-hidden="true">
+      <label for="navToggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"        class="nav-link">Home</a></li>
+        <li><a href="services.html"     class="nav-link">Services</a></li>
+        <li><a href="booking.html"      class="nav-link">Book Now</a></li>
+        <li><a href="staff.html"        class="nav-link">Our Team</a></li>
+        <li><a href="gallery.html"      class="nav-link">Gallery</a></li>
+        <li><a href="contact.html"      class="nav-link">Contact</a></li>
+        <li><a href="appointments.html" class="nav-link">Admin</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">Dark mode</button>
+        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <div class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Our Team</span>
+        </nav>
+        <h1>Meet Our Stylists</h1>
+        <p>Passionate professionals dedicated to making you look and feel your best</p>
+      </div>
+    </div>
+
+    <!-- ======================================================
+         STAFF PROFILES
+         Unit II: article, figure, figcaption
+         Unit I: Images with descriptive alt text
+    ====================================================== -->
+    <section class="section" aria-labelledby="team-heading">
+      <div class="container">
+        <h2 id="team-heading" class="section-title">The Lumina Team</h2>
+        <p class="section-subtitle">Trained, certified, and passionate about beauty</p>
+
+        <div class="staff-grid" id="staffGrid">
+          <!-- JS renders profiles -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         WEEKLY AVAILABILITY TABLE
+         Unit II: table with thead, tbody, caption, scope,
+                  colspan, rowspan
+    ====================================================== -->
+    <section class="section" style="background: rgba(201,168,76,0.04);" aria-labelledby="availability-heading">
+      <div class="container">
+        <h2 id="availability-heading" class="section-title">Weekly Availability</h2>
+        <p class="section-subtitle">
+          <span class="avail-dot" aria-hidden="true"></span> Available &nbsp;
+          <span class="avail-dot off" aria-hidden="true"></span> Off
+        </p>
+
+        <div class="table-wrap">
+          <table class="avail-table" aria-label="Stylist weekly availability">
+            <caption>Availability schedule (current week)</caption>
+            <thead>
+              <tr>
+                <!-- Unit II: scope="col" -->
+                <th scope="col">Stylist</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+                <th scope="col">Sun</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Unit II: scope="row" for row headers -->
+              <tr>
+                <th scope="row">Meena Krishnan</th>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot off" aria-label="Off"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot off" aria-label="Off"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">Ritika Verma</th>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot off" aria-label="Off"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot off" aria-label="Off"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">Sana Qureshi</th>
+                <td><span class="avail-dot off" aria-label="Off"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot off" aria-label="Off"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+              </tr>
+              <tr>
+                <th scope="row">Divya Pillai</th>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot off" aria-label="Off"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot" aria-label="Available"></span></td>
+                <td><span class="avail-dot off" aria-label="Off"></span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <!-- Unit II: colspan -->
+                <td colspan="8">Slots subject to change. Book online to confirm availability.</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); color:#fff; text-align:center;">
+      <div class="container">
+        <h2 style="color:#fff; margin-bottom:0.75rem;">Ready to Book with Your Favourite Stylist?</h2>
+        <p style="color:rgba(255,255,255,0.85); margin-bottom:2rem;">Reserve your slot in just two minutes.</p>
+        <a href="booking.html" class="btn" style="background:#fff; color:var(--color-primary);">Book Now</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:0.9rem; display:flex; color:#fff;">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="14" fill="#c9a84c" opacity="0.2"/>
+              <path d="M16 4 C16 4 22 10 22 17 C22 20.3 19.3 23 16 23 C12.7 23 10 20.3 10 17 C10 10 16 4 16 4Z" fill="#c9a84c"/>
+              <circle cx="16" cy="17" r="3" fill="#fff"/>
+            </svg>
+            <span style="color:#fff;">Lumina</span>
+          </a>
+          <p class="footer-desc">Premium beauty &amp; wellness in Kochi since 2015.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Quick Links</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Info</p>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="appointments.html">Admin</a></li>
+          </ul>
+        </div>
+        <address class="footer-contact" style="font-style:normal;">
+          <p class="footer-heading" style="font-style:normal;">Contact</p>
+          <p>42, MG Road, Ernakulam, Kochi</p>
+          <p><a href="tel:+914842345678" style="color:#9a9080;">+91 484 234 5678</a></p>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <time datetime="2026">2026</time> Lumina Salon. All rights reserved.</p>
+        <p>CSE326 Internet Programming</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    var staffData = [
+      {
+        name: "Meena Krishnan",
+        role: "Senior Stylist & Bridal Expert",
+        exp: "12 years",
+        bio: "Meena is our head bridal artist, trained at the Academy of Cosmetology, Mumbai. She specialises in South Indian and fusion bridal looks and has worked on over 400 brides.",
+        skills: ["Bridal Makeup", "Hair Coloring", "Keratin", "Blowout"],
+        img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"
+      },
+      {
+        name: "Ritika Verma",
+        role: "Hair Specialist",
+        exp: "8 years",
+        bio: "Ritika holds a diploma in advanced hair science from Delhi. Her precision cuts and balayage techniques have earned her a loyal clientele of over 200 regulars.",
+        skills: ["Haircut", "Balayage", "Deep Conditioning", "Keratin"],
+        img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80"
+      },
+      {
+        name: "Sana Qureshi",
+        role: "Skin & Wellness Specialist",
+        exp: "6 years",
+        bio: "Sana is a certified aesthetician with expertise in skin analysis and customised facial treatments. She takes a holistic approach to skincare, combining nutrition advice with treatment.",
+        skills: ["Facials", "Waxing", "Eyebrows", "Anti-Ageing"],
+        img: "https://images.unsplash.com/photo-1619895862022-09114b41f16f?w=400&q=80"
+      },
+      {
+        name: "Divya Pillai",
+        role: "Nail Artist & Makeup Artist",
+        exp: "5 years",
+        bio: "Divya's nail art designs have been featured in Kerala Bride magazine. She is equally skilled in party and event makeup, known for her eye for detail and clean finish.",
+        skills: ["Nail Art", "Manicure", "Party Makeup", "Mehendi Styling"],
+        img: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=400&q=80"
+      }
+    ];
+
+    var grid = document.getElementById("staffGrid");
+    if (grid) {
+      staffData.forEach(function (s) {
+        var article = document.createElement("article");
+        article.className = "staff-card";
+
+        var skillTags = s.skills.map(function(sk) {
+          return '<span class="skill-tag">' + sk + '</span>';
+        }).join("");
+
+        // Unit II: figure and figcaption for staff images
+        article.innerHTML =
+          '<figure style="margin:0;">' +
+            '<img src="' + s.img + '" alt="Portrait of ' + s.name + ', ' + s.role + '" class="staff-img" loading="lazy" ' +
+              'onerror="this.style.background=\'linear-gradient(135deg,#f0e6d3,#e8d5b7)\'; this.removeAttribute(\'src\');">' +
+            '<figcaption class="staff-body">' +
+              '<h3 class="staff-name">' + s.name + '</h3>' +
+              '<p class="staff-role">' + s.role + '</p>' +
+              '<p class="staff-bio">' + s.bio + '</p>' +
+              '<div class="staff-skills">' + skillTags + '</div>' +
+              '<a href="booking.html?stylist=' + encodeURIComponent(s.name) + '" class="btn btn-outline btn-sm" style="margin-top:1rem;">Book with ' + s.name.split(" ")[0] + '</a>' +
+            '</figcaption>' +
+          '</figure>';
+        grid.appendChild(article);
+      });
+    }
+  </script>
+</body>
+</html>

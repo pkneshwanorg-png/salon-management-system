@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book an Appointment | Lumina Salon</title>
+  <meta name="description" content="Book your salon appointment online at Lumina Salon, Kochi. Choose your service, stylist, and preferred time slot.">
+  <meta name="keywords" content="book appointment, salon booking, Kochi salon">
+  <meta property="og:title" content="Book Appointment | Lumina Salon">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Lumina Salon home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" fill="#c9a84c" opacity="0.15"/>
+          <path d="M16 4 C16 4 22 10 22 17 C22 20.3 19.3 23 16 23 C12.7 23 10 20.3 10 17 C10 10 16 4 16 4Z" fill="#c9a84c"/>
+          <circle cx="16" cy="17" r="3" fill="#fff"/>
+          <line x1="16" y1="23" x2="16" y2="29" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Lumina</span>
+      </a>
+      <input type="checkbox" id="navToggle" class="nav-toggle" aria-hidden="true">
+      <label for="navToggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"        class="nav-link">Home</a></li>
+        <li><a href="services.html"     class="nav-link">Services</a></li>
+        <li><a href="booking.html"      class="nav-link">Book Now</a></li>
+        <li><a href="staff.html"        class="nav-link">Our Team</a></li>
+        <li><a href="gallery.html"      class="nav-link">Gallery</a></li>
+        <li><a href="contact.html"      class="nav-link">Contact</a></li>
+        <li><a href="appointments.html" class="nav-link">Admin</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">Dark mode</button>
+        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <div class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Book Appointment</span>
+        </nav>
+        <h1>Book Your Appointment</h1>
+        <p>Fill in the details below and we'll confirm your slot</p>
+      </div>
+    </div>
+
+    <!-- ======================================================
+         BOOKING FORM
+         Unit II: Forms, fieldset, legend, label-for pairing
+         Unit II: input types: text, email, tel, date, time, select,
+                  datalist, radio, checkbox, textarea, range
+         Unit II: attributes: required, pattern, min, max,
+                  placeholder, autocomplete
+         Unit II: HTML5 validation
+    ====================================================== -->
+    <section class="section" aria-labelledby="booking-form-heading">
+      <div class="container">
+        <div class="form-card">
+          <h2 id="booking-form-heading" class="form-title">New Appointment</h2>
+          <p class="form-subtitle">All fields marked <span style="color:var(--color-danger)">*</span> are required</p>
+
+          <form id="bookingForm" novalidate autocomplete="on">
+
+            <!-- Personal details fieldset - Unit II: fieldset/legend -->
+            <fieldset>
+              <legend>Personal Details</legend>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <!-- Unit II: label for pairing -->
+                  <label for="bookName">Full Name <span class="required">*</span></label>
+                  <!-- Unit II: text input, required, pattern, placeholder, autocomplete -->
+                  <input type="text" id="bookName" name="name"
+                    required minlength="3" maxlength="60"
+                    placeholder="e.g. Priya Nair"
+                    autocomplete="name"
+                    pattern="[A-Za-z\s]{3,60}"
+                    aria-describedby="nameHint">
+                  <small id="nameHint" class="form-hint">Letters and spaces only</small>
+                </div>
+
+                <div class="form-group">
+                  <label for="bookPhone">Phone Number <span class="required">*</span></label>
+                  <!-- Unit II: tel input, pattern for Indian mobile numbers -->
+                  <input type="tel" id="bookPhone" name="phone"
+                    required
+                    placeholder="98XXXXXXXX"
+                    autocomplete="tel"
+                    pattern="[6-9][0-9]{9}"
+                    maxlength="10"
+                    aria-describedby="phoneHint">
+                  <small id="phoneHint" class="form-hint">10-digit Indian mobile number</small>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="bookEmail">Email Address</label>
+                <!-- Unit II: email input, autocomplete -->
+                <input type="email" id="bookEmail" name="email"
+                  placeholder="yourname@email.com"
+                  autocomplete="email">
+              </div>
+            </fieldset>
+
+            <!-- Appointment details fieldset -->
+            <fieldset>
+              <legend>Appointment Details</legend>
+
+              <div class="form-group">
+                <label for="bookService">Service <span class="required">*</span></label>
+                <!-- Unit II: select element -->
+                <select id="bookService" name="service" required aria-describedby="serviceHint">
+                  <option value="" disabled selected>Select a service&hellip;</option>
+                  <optgroup label="Hair">
+                    <option value="Haircut & Styling">Haircut &amp; Styling - &#8377;800</option>
+                    <option value="Blowout & Styling">Blowout &amp; Styling - &#8377;1,200</option>
+                    <option value="Keratin Treatment">Keratin Treatment - &#8377;5,500</option>
+                    <option value="Hair Coloring">Hair Coloring - &#8377;3,500</option>
+                    <option value="Deep Conditioning">Deep Conditioning - &#8377;1,000</option>
+                    <option value="Head Massage">Head Massage - &#8377;600</option>
+                  </optgroup>
+                  <optgroup label="Skin &amp; Beauty">
+                    <option value="Classic Facial">Classic Facial - &#8377;1,800</option>
+                    <option value="Anti-Ageing Facial">Anti-Ageing Facial - &#8377;2,800</option>
+                    <option value="Eyebrow Threading & Shaping">Eyebrow Threading &amp; Shaping - &#8377;300</option>
+                    <option value="Waxing (Full Body)">Waxing (Full Body) - &#8377;2,200</option>
+                    <option value="Manicure & Pedicure Combo">Manicure &amp; Pedicure Combo - &#8377;1,500</option>
+                  </optgroup>
+                  <optgroup label="Bridal &amp; Special">
+                    <option value="Bridal Makeup">Bridal Makeup - &#8377;8,000</option>
+                    <option value="Party Makeup">Party Makeup - &#8377;3,500</option>
+                  </optgroup>
+                </select>
+                <small id="serviceHint" class="form-hint">Can't find your service? Call us!</small>
+              </div>
+
+              <div class="form-group">
+                <label for="bookStylist">Preferred Stylist <span class="required">*</span></label>
+                <!-- Unit II: select, datalist alternative shown below -->
+                <select id="bookStylist" name="stylist" required>
+                  <option value="" disabled selected>Select a stylist&hellip;</option>
+                  <option value="Meena Krishnan">Meena Krishnan</option>
+                  <option value="Ritika Verma">Ritika Verma</option>
+                  <option value="Sana Qureshi">Sana Qureshi</option>
+                  <option value="Divya Pillai">Divya Pillai</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="bookDate">Date <span class="required">*</span></label>
+                  <!-- Unit II: date input, min attribute -->
+                  <input type="date" id="bookDate" name="date"
+                    required
+                    autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                  <label for="bookTime">Time <span class="required">*</span></label>
+                  <!-- Unit II: time input, min, max -->
+                  <input type="time" id="bookTime" name="time"
+                    required
+                    min="09:00" max="20:00"
+                    autocomplete="off"
+                    aria-describedby="timeHint">
+                  <small id="timeHint" class="form-hint">Salon hours: 9:00 AM - 8:00 PM</small>
+                </div>
+              </div>
+
+              <!-- Unit II: datalist element -->
+              <div class="form-group">
+                <label for="bookReferral">How did you hear about us?</label>
+                <input type="text" id="bookReferral" name="referral"
+                  list="referralSources"
+                  placeholder="Type or choose&hellip;"
+                  autocomplete="off">
+                <datalist id="referralSources">
+                  <option value="Instagram">
+                  <option value="Facebook">
+                  <option value="Google Search">
+                  <option value="Friend or Family">
+                  <option value="Walk-in">
+                  <option value="Other">
+                </datalist>
+              </div>
+            </fieldset>
+
+            <!-- Preferences fieldset -->
+            <fieldset>
+              <legend>Preferences</legend>
+
+              <!-- Unit II: radio inputs -->
+              <div class="form-group">
+                <label>Appointment Type <span class="required">*</span></label>
+                <div class="radio-group" role="radiogroup" aria-label="Appointment type">
+                  <label class="radio-label">
+                    <input type="radio" name="appointmentType" value="Individual" checked>
+                    <span>Individual</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="appointmentType" value="Group">
+                    <span>Group (2-4)</span>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="appointmentType" value="Bridal Party">
+                    <span>Bridal Party</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Unit II: checkbox inputs -->
+              <div class="form-group">
+                <label>Add-on Services (optional)</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="addons" value="Scalp Massage">
+                    <span>Scalp Massage (+&#8377;300)</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="addons" value="Deep Conditioner">
+                    <span>Deep Conditioner (+&#8377;400)</span>
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="addons" value="Nail Art">
+                    <span>Nail Art (+&#8377;250)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Unit II: range input -->
+              <div class="form-group">
+                <label for="budgetRange">Approximate Budget: <strong id="budgetDisplay">&#8377;3,000</strong></label>
+                <input type="range" id="budgetRange" name="budget"
+                  min="300" max="10000" step="100" value="3000"
+                  aria-label="Budget range">
+                <div class="range-label">
+                  <span>&#8377;300</span><span>&#8377;10,000</span>
+                </div>
+              </div>
+
+              <!-- Unit II: number input -->
+              <div class="form-group">
+                <label for="guestCount">Number of Guests</label>
+                <input type="number" id="guestCount" name="guestCount"
+                  min="1" max="20" value="1"
+                  placeholder="1"
+                  aria-describedby="guestHint">
+                <small id="guestHint" class="form-hint">For group bookings</small>
+              </div>
+
+              <!-- Unit II: textarea -->
+              <div class="form-group">
+                <label for="bookNotes">Special Notes or Requests</label>
+                <textarea id="bookNotes" name="notes"
+                  rows="3"
+                  maxlength="400"
+                  placeholder="Allergies, specific products to avoid, any special request&hellip;"
+                  aria-describedby="notesHint"></textarea>
+                <small id="notesHint" class="form-hint">Max 400 characters</small>
+              </div>
+            </fieldset>
+
+            <div class="form-group">
+              <label class="checkbox-label" style="border:none; padding:0;">
+                <input type="checkbox" id="bookAgree" name="agree" required>
+                <span>I agree to the <a href="contact.html">cancellation policy</a> and confirm my details are correct. <span class="required">*</span></span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-full" style="font-size:1.05rem; padding:1rem;">
+              Confirm Appointment
+            </button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:0.9rem; display:flex; color:#fff;">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="14" fill="#c9a84c" opacity="0.2"/>
+              <path d="M16 4 C16 4 22 10 22 17 C22 20.3 19.3 23 16 23 C12.7 23 10 20.3 10 17 C10 10 16 4 16 4Z" fill="#c9a84c"/>
+              <circle cx="16" cy="17" r="3" fill="#fff"/>
+            </svg>
+            <span style="color:#fff;">Lumina</span>
+          </a>
+          <p class="footer-desc">Premium beauty &amp; wellness in Kochi since 2015.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Quick Links</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="staff.html">Our Team</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Info</p>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="appointments.html">Admin</a></li>
+          </ul>
+        </div>
+        <address class="footer-contact" style="font-style:normal;">
+          <p class="footer-heading" style="font-style:normal;">Contact</p>
+          <p>42, MG Road, Ernakulam, Kochi</p>
+          <p><a href="tel:+914842345678" style="color:#9a9080;">+91 484 234 5678</a></p>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <time datetime="2026">2026</time> Lumina Salon. All rights reserved.</p>
+        <p>CSE326 Internet Programming</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Set min date to today
+    var dateInput = document.getElementById("bookDate");
+    if (dateInput) {
+      dateInput.min = new Date().toISOString().slice(0, 10);
+    }
+
+    // Live budget display
+    var rangeInput   = document.getElementById("budgetRange");
+    var budgetDisplay = document.getElementById("budgetDisplay");
+    if (rangeInput) {
+      rangeInput.addEventListener("input", function () {
+        budgetDisplay.textContent = "\u20B9" + parseInt(this.value).toLocaleString("en-IN");
+      });
+    }
+
+    // Form submit handler
+    var form = document.getElementById("bookingForm");
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Basic HTML5 validation check
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        var data = {
+          name:    document.getElementById("bookName").value.trim(),
+          phone:   document.getElementById("bookPhone").value.trim(),
+          email:   document.getElementById("bookEmail").value.trim(),
+          service: document.getElementById("bookService").value,
+          stylist: document.getElementById("bookStylist").value,
+          date:    document.getElementById("bookDate").value,
+          time:    document.getElementById("bookTime").value,
+          notes:   document.getElementById("bookNotes").value.trim()
+        };
+
+        var result = addBooking(data);
+        if (result.ok) {
+          showToast("Appointment booked! We'll confirm shortly.");
+          form.reset();
+          budgetDisplay.textContent = "\u20B93,000";
+        } else {
+          showToast(result.message, "error");
+        }
+      });
+    }
+  </script>
+</body>
+</html>

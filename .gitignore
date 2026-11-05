@@ -1,0 +1,12 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Agent / tool folders (not part of the project)
+.gemini/
+.cursor/
+brain/

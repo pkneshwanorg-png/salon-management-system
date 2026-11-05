@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Lumina Salon - Kochi</title>
+  <meta name="description" content="Browse Lumina Salon's gallery of haircuts, bridal looks, facials, and more.">
+  <meta name="keywords" content="salon gallery, hair photos, bridal makeup, before after, Kochi">
+  <meta property="og:title" content="Gallery | Lumina Salon">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Lumina Salon home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" fill="#c9a84c" opacity="0.15"/>
+          <path d="M16 4 C16 4 22 10 22 17 C22 20.3 19.3 23 16 23 C12.7 23 10 20.3 10 17 C10 10 16 4 16 4Z" fill="#c9a84c"/>
+          <circle cx="16" cy="17" r="3" fill="#fff"/>
+          <line x1="16" y1="23" x2="16" y2="29" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Lumina</span>
+      </a>
+      <input type="checkbox" id="navToggle" class="nav-toggle" aria-hidden="true">
+      <label for="navToggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </label>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html"        class="nav-link">Home</a></li>
+        <li><a href="services.html"     class="nav-link">Services</a></li>
+        <li><a href="booking.html"      class="nav-link">Book Now</a></li>
+        <li><a href="staff.html"        class="nav-link">Our Team</a></li>
+        <li><a href="gallery.html"      class="nav-link">Gallery</a></li>
+        <li><a href="contact.html"      class="nav-link">Contact</a></li>
+        <li><a href="appointments.html" class="nav-link">Admin</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">Dark mode</button>
+        <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <div class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Gallery</span>
+        </nav>
+        <h1>Our Work</h1>
+        <p>A glimpse of the transformations that happen every day at Lumina</p>
+      </div>
+    </div>
+
+    <!-- ======================================================
+         PHOTO GALLERY
+         Unit III: CSS Grid, gallery layout
+         Unit I: Images with alt text
+         Unit II: figure, figcaption
+    ====================================================== -->
+    <section class="section" aria-labelledby="gallery-heading">
+      <div class="container">
+        <h2 id="gallery-heading" class="section-title">Photo Gallery</h2>
+        <p class="section-subtitle">Real clients, real results</p>
+
+        <div class="gallery-grid" role="list">
+
+          <!-- Unit I: Images with descriptive alt text -->
+          <figure class="gallery-item wide" role="listitem">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80"
+              alt="Stylist working on a client's hair in a bright salon"
+              loading="lazy"
+              onerror="this.closest('figure').style.background='linear-gradient(135deg,#f0e6d3,#e8d5b7)'; this.style.display='none';">
+            <figcaption class="gallery-overlay">Hair Styling Session</figcaption>
+          </figure>
+
+          <figure class="gallery-item tall" role="listitem">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80"
+              alt="Close-up of bridal makeup being applied with a brush"
+              loading="lazy"
+              onerror="this.closest('figure').style.background='linear-gradient(135deg,#f5e9d4,#edd8b8)'; this.style.display='none';">
+            <figcaption class="gallery-overlay">Bridal Look by Meena</figcaption>
+          </figure>
+
+          <figure class="gallery-item" role="listitem">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&q=80"
+              alt="Hair coloring treatment - warm caramel tones on dark hair"
+              loading="lazy"
+              onerror="this.closest('figure').style.background='linear-gradient(135deg,#f0e6d3,#e8d5b7)'; this.style.display='none';">
+            <figcaption class="gallery-overlay">Balayage Coloring</figcaption>
+          </figure>
+
+          <figure class="gallery-item" role="listitem">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80"
+              alt="Client relaxing during a facial treatment with a white towel on her head"
+              loading="lazy"
+              onerror="this.closest('figure').style.background='linear-gradient(135deg,#f5e9d4,#edd8b8)'; this.style.display='none';">
+            <figcaption class="gallery-overlay">Classic Facial</figcaption>
+          </figure>
+
+          <figure class="gallery-item" role="listitem">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80"
+              alt="Beautifully painted nails with pastel pink gel polish"
+              loading="lazy"
+              onerror="this.closest('figure').style.background='linear-gradient(135deg,#f0e6d3,#e8d5b7)'; this.style.display='none';">
+            <figcaption class="gallery-overlay">Nail Art - Gel Polish</figcaption>
+          </figure>
+
+          <figure class="gallery-item wide" role="listitem">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80"
+              alt="Bride with full makeup and floral accessories on her wedding day"
+              loading="lazy"
+              onerror="this.closest('figure').style.background='linear-gradient(135deg,#f5e9d4,#edd8b8)'; this.style.display='none';">
+            <figcaption class="gallery-overlay">Wedding Day Bridal Look</figcaption>
+          </figure>
+
+          <figure class="gallery-item" role="listitem">
+            <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400&q=80"
+              alt="Relaxing head massage with warm oil"
+              loading="lazy"
+              onerror="this.closest('figure').style.background='linear-gradient(135deg,#f0e6d3,#e8d5b7)'; this.style.display='none';">
+            <figcaption class="gallery-overlay">Head Massage</figcaption>
+          </figure>
+
+          <figure class="gallery-item" role="listitem">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&q=80"
+              alt="Anti-ageing facial with steam treatment"
+              loading="lazy"
+              onerror="this.closest('figure').style.background='linear-gradient(135deg,#f5e9d4,#edd8b8)'; this.style.display='none';">
+            <figcaption class="gallery-overlay">Anti-Ageing Facial</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         VIDEO SECTION
+         Unit I: <video> element with controls, poster, fallback
+    ====================================================== -->
+    <section class="media-section" aria-labelledby="video-heading">
+      <div class="container">
+        <h2 id="video-heading">Inside Lumina Salon</h2>
+        <p style="color:rgba(255,255,255,0.7); margin-bottom:2rem;">
+          A quick look at our beautiful space and the team at work
+        </p>
+
+        <!-- Unit I: video element -->
+        <video
+          width="800"
+          controls
+          poster="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=60"
+          aria-label="Lumina Salon walkthrough video"
+          style="max-width:100%; border-radius:12px;">
+          <!-- Fallback text shown if video not supported -->
+          <source src="assets/video/salon-tour.mp4" type="video/mp4">
+          <p>Your browser does not support the video element. <a href="assets/video/salon-tour.mp4" style="color:var(--color-primary);">Download the video</a>.</p>
+        </video>
+
+        <!-- Unit I: audio element for ambient music -->
+        <div style="max-width:400px; margin:2rem auto 0;">
+          <p style="color:rgba(255,255,255,0.7); font-size:0.9rem; margin-bottom:0.5rem;">Ambient salon music</p>
+          <!-- Unit I: audio element -->
+          <audio controls aria-label="Ambient salon background music">
+            <source src="assets/audio/ambient.mp3" type="audio/mpeg">
+            <source src="assets/audio/ambient.ogg" type="audio/ogg">
+            <p>Your browser does not support the audio element.</p>
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         INLINE SVG ICONS SHOWCASE
+         Unit I: Inline SVG graphics
+    ====================================================== -->
+    <section class="section" aria-labelledby="svg-heading">
+      <div class="container">
+        <h2 id="svg-heading" class="section-title">Our Specialisations</h2>
+        <p class="section-subtitle">Illustrated with custom SVG icons</p>
+
+        <div class="why-grid">
+          <div class="why-item">
+            <div class="why-icon" aria-hidden="true">
+              <!-- Unit I: Inline SVG scissors icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+                <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+                <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+                <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <h3 class="why-title">Precision Cuts</h3>
+            <p class="text-muted">Every cut is measured, balanced, and tailored to your bone structure.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon" aria-hidden="true">
+              <!-- Unit I: Inline SVG palette icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
+                <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
+                <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
+                <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>
+              </svg>
+            </div>
+            <h3 class="why-title">Colour Artistry</h3>
+            <p class="text-muted">Custom blends, balayage, ombre, and vivid fashion shades.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon" aria-hidden="true">
+              <!-- Unit I: Inline SVG sparkle icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path d="M12 2l1.09 4.26L17 7l-3.91 1-1.09 4L10.91 8 7 7l3.91-1L12 2z" opacity="0.8"/>
+                <path d="M5 12l.75 2.25L8 15l-2.25.75L5 18l-.75-2.25L2 15l2.25-.75L5 12z" opacity="0.6"/>
+                <path d="M19 4l.5 1.5L21 6l-1.5.5L19 8l-.5-1.5L17 6l1.5-.5L19 4z" opacity="0.5"/>
+              </svg>
+            </div>
+            <h3 class="why-title">Bridal Glam</h3>
+            <p class="text-muted">Flawless bridal looks from trial to the big day.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <h3 class="why-title">Skin Wellness</h3>
+            <p class="text-muted">Science-backed facials and treatments for healthy, glowing skin.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         GOOGLE MAPS IFRAME
+         Unit I: <iframe> element
+    ====================================================== -->
+    <section class="section" style="padding-top:0;" aria-labelledby="map-heading">
+      <div class="container">
+        <h2 id="map-heading" class="section-title mb-2">Find Us in Kochi</h2>
+        <p class="section-subtitle">42, MG Road, Ernakulam, Kochi - 682035</p>
+
+        <div class="map-wrap">
+          <!-- Unit I: iframe for Google Maps embed -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0167573024944!2d76.28774461479213!3d9.983153492879395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514abec6bf%3A0xbd582caa5f6a2fd5!2sMG%20Road%2C%20Ernakulam%2C%20Kochi!5e0!3m2!1sen!2sin!4v1623000000000!5m2!1sen!2sin"
+            title="Lumina Salon location on Google Maps"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:0.9rem; display:flex; color:#fff;">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="14" fill="#c9a84c" opacity="0.2"/>
+              <path d="M16 4 C16 4 22 10 22 17 C22 20.3 19.3 23 16 23 C12.7 23 10 20.3 10 17 C10 10 16 4 16 4Z" fill="#c9a84c"/>
+              <circle cx="16" cy="17" r="3" fill="#fff"/>
+            </svg>
+            <span style="color:#fff;">Lumina</span>
+          </a>
+          <p class="footer-desc">Premium beauty &amp; wellness in Kochi since 2015.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Quick Links</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="staff.html">Our Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Info</p>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="appointments.html">Admin</a></li>
+          </ul>
+        </div>
+        <address class="footer-contact" style="font-style:normal;">
+          <p class="footer-heading" style="font-style:normal;">Contact</p>
+          <p>42, MG Road, Ernakulam, Kochi</p>
+          <p><a href="tel:+914842345678" style="color:#9a9080;">+91 484 234 5678</a></p>
+        </address>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <time datetime="2026">2026</time> Lumina Salon. All rights reserved.</p>
+        <p>CSE326 Internet Programming</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
