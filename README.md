@@ -2,7 +2,7 @@
 
 **Course:** CSE326 Internet Programming  
 **Student:** [Your Name]  
-**Live URL:** https://neshwanpk.github.io/salon-management-system/
+**Live URL:** https://pkneshwanorg-png.github.io/salon-management-system/
 
 This is a multi-page salon management website I built for my CSE326 Internet Programming course. It covers a complete front-end for a fictional premium salon called "Lumina Salon" in Kochi, Kerala. All data is stored in localStorage — no server or npm required.
 
